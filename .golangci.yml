@@ -33,6 +33,7 @@ linters:
     - unparam
     - varcheck
     - vet
+    - whitespace
 
 linters-settings:
   errcheck:
