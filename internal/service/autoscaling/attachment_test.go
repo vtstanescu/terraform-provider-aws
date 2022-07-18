@@ -14,7 +14,6 @@ import (
 )
 
 func TestAccAutoScalingAttachment_elb(t *testing.T) {
-
 	rInt := sdkacctest.RandInt()
 
 	resource.ParallelTest(t, resource.TestCase{
@@ -58,7 +57,6 @@ func TestAccAutoScalingAttachment_elb(t *testing.T) {
 }
 
 func TestAccAutoScalingAttachment_albTargetGroup(t *testing.T) {
-
 	rInt := sdkacctest.RandInt()
 
 	resource.ParallelTest(t, resource.TestCase{

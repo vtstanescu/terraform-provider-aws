@@ -112,7 +112,6 @@ func resourceCodeRepositoryRead(d *schema.ResourceData, meta interface{}) error 
 			return nil
 		}
 		return fmt.Errorf("error reading SageMaker code repository (%s): %w", d.Id(), err)
-
 	}
 
 	arn := aws.StringValue(codeRepository.CodeRepositoryArn)

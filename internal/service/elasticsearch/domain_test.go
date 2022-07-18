@@ -1718,7 +1718,6 @@ func testAccCheckDomainDestroy(s *terraform.State) error {
 		}
 
 		return fmt.Errorf("Elasticsearch domain %s still exists", rs.Primary.ID)
-
 	}
 	return nil
 }

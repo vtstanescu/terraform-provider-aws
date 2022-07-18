@@ -529,7 +529,6 @@ func testAccCheckFunctionEventInvokeConfigDestroy(s *terraform.State) error {
 	}
 
 	return nil
-
 }
 
 func testAccCheckFunctionEventInvokeDisappearsConfig(resourceName string) resource.TestCheckFunc {

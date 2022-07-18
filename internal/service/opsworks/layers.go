@@ -742,7 +742,6 @@ func (lt *opsworksLayerType) SetAttributeMap(d *schema.ResourceData, attrs map[s
 				return fmt.Errorf("Unsupported OpsWorks layer attribute type: %s", def.Type)
 			}
 			return nil
-
 		} else {
 			d.Set(key, nil)
 		}

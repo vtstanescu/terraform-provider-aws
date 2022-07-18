@@ -191,7 +191,6 @@ func testAccCheckSubnetGroupExists(n string, csg *elasticache.CacheSubnetGroup) 
 
 func testAccCheckSubnetGroupAttrs(csg *elasticache.CacheSubnetGroup, n string, count int) resource.TestCheckFunc {
 	return func(s *terraform.State) error {
-
 		rs, ok := s.RootModule().Resources[n]
 		if !ok {
 			return fmt.Errorf("Not found: %s", n)

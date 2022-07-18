@@ -382,7 +382,6 @@ func resourceTableCreate(d *schema.ResourceData, meta interface{}) error {
 	log.Printf("[DEBUG] Creating DynamoDB table with key schema: %#v", keySchemaMap)
 
 	if _, ok := d.GetOk("restore_source_name"); ok {
-
 		req := &dynamodb.RestoreTableToPointInTimeInput{
 			TargetTableName: aws.String(d.Get("name").(string)),
 			SourceTableName: aws.String(d.Get("restore_source_name").(string)),
@@ -470,7 +469,6 @@ func resourceTableCreate(d *schema.ResourceData, meta interface{}) error {
 		if output == nil || output.TableDescription == nil {
 			return errors.New("error creating DynamoDB Table: empty response")
 		}
-
 	} else {
 		req := &dynamodb.CreateTableInput{
 			TableName:   aws.String(d.Get("name").(string)),
@@ -1043,7 +1041,6 @@ func createReplicas(conn *dynamodb.DynamoDB, tableName string, tfList []interfac
 		if err = updatePITR(conn, tableName, tfMap["point_in_time_recovery"].(bool), tfMap["region_name"].(string), tfVersion, timeout); err != nil {
 			return names.Error(names.DynamoDB, names.ErrActionUpdating, "Table", tableName, err)
 		}
-
 	}
 
 	return nil

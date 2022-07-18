@@ -239,7 +239,6 @@ func TestAccLightsailContainerService_Scale(t *testing.T) {
 			},
 		},
 	})
-
 }
 
 func TestAccLightsailContainerService_tags(t *testing.T) {

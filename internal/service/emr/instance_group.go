@@ -448,7 +448,6 @@ func readEBSConfig(d *schema.ResourceData) *emr.EbsConfiguration {
 func marshalWithoutNil(v interface{}) ([]byte, error) {
 	//removeNil is a helper for stripping nil values
 	removeNil := func(data map[string]interface{}) map[string]interface{} {
-
 		m := make(map[string]interface{})
 		for k, v := range data {
 			if v == nil {

@@ -2549,7 +2549,6 @@ func testAccCheckReplicationGroupUserGroup(resourceName, userGroupID string) res
 			return fmt.Errorf("ElastiCache Replication Group (%s) was not assigned usergroup (%s), usergroup was (%s) instead", resourceName, userGroupID, *rg.UserGroupIds[0])
 		}
 		return nil
-
 	}
 }
 
@@ -2774,7 +2773,6 @@ resource "aws_elasticache_replication_group" "test" {
   user_group_ids                = [aws_elasticache_user_group.test[%[3]d].id]
 }
 `, rName, userGroup, flag)
-
 }
 
 func testAccReplicationGroupConfig_inVPC(rName string) string {

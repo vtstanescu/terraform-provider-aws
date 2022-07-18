@@ -236,7 +236,6 @@ func resourceSubnetGroupDeleteRefreshFunc(
 	conn := meta.(*conns.AWSClient).RDSConn
 
 	return func() (interface{}, string, error) {
-
 		deleteOpts := rds.DeleteDBSubnetGroupInput{
 			DBSubnetGroupName: aws.String(d.Id()),
 		}

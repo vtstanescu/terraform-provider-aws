@@ -127,7 +127,6 @@ func resourceRDSDBInstanceRead(d *schema.ResourceData, meta interface{}) error {
 			d.Set("rds_db_instance_arn", instance.RdsDbInstanceArn)
 			d.Set("db_user", instance.DbUser)
 		}
-
 	}
 
 	if !found {

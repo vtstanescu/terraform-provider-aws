@@ -403,13 +403,11 @@ func expandActions(a []interface{}) []*codepipeline.ActionDeclaration {
 		if len(oa) > 0 {
 			outputArtifacts := expandActionsOutputArtifacts(oa)
 			action.OutputArtifacts = outputArtifacts
-
 		}
 		ia := data["input_artifacts"].([]interface{})
 		if len(ia) > 0 {
 			inputArtifacts := expandActionsInputArtifacts(ia)
 			action.InputArtifacts = inputArtifacts
-
 		}
 		ra := data["role_arn"].(string)
 		if ra != "" {

@@ -249,7 +249,6 @@ func expandAnomalySubscriptionMonitorARNList(rawMonitorArnList []interface{}) []
 	var monitorArns []string
 
 	for _, arn := range rawMonitorArnList {
-
 		monitorArns = append(monitorArns, arn.(string))
 	}
 

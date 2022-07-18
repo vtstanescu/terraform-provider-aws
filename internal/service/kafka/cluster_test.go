@@ -1844,7 +1844,6 @@ resource "aws_msk_cluster" "test" {
   }
 }
 `, rName))
-
 }
 
 func testAccClusterConfig_encryptionInfoEncryptionInTransitClientBroker(rName, clientBroker string) string {
@@ -1909,7 +1908,6 @@ resource "aws_msk_cluster" "test" {
   }
 }
 `, rName, enhancedMonitoring))
-
 }
 
 func testAccClusterConfig_numberOfBrokerNodes(rName string, brokerCount int) string {
@@ -1927,7 +1925,6 @@ resource "aws_msk_cluster" "test" {
   }
 }
 `, rName, brokerCount))
-
 }
 
 func testAccClusterConfig_openMonitoring(rName string, jmxExporterEnabled bool, nodeExporterEnabled bool) string {

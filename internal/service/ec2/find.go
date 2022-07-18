@@ -3973,7 +3973,6 @@ func FindTransitGatewayVPCAttachmentByID(conn *ec2.EC2, id string) (*ec2.Transit
 			Message:     state,
 			LastRequest: input,
 		}
-
 	}
 
 	// Eventual consistency check.

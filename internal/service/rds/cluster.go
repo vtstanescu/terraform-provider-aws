@@ -697,7 +697,6 @@ func resourceClusterCreate(d *schema.ResourceData, meta interface{}) error {
 			log.Printf("[ERROR] Error creating RDS Cluster: %s", err)
 			return err
 		}
-
 	} else if v, ok := d.GetOk("restore_to_point_in_time"); ok {
 		pointInTime := v.([]interface{})[0].(map[string]interface{})
 		createOpts := &rds.RestoreDBClusterToPointInTimeInput{
@@ -800,7 +799,6 @@ func resourceClusterCreate(d *schema.ResourceData, meta interface{}) error {
 
 		log.Printf("[DEBUG]: RDS Cluster restore response: %s", resp)
 	} else {
-
 		createOpts := &rds.CreateDBClusterInput{
 			CopyTagsToSnapshot:   aws.Bool(d.Get("copy_tags_to_snapshot").(bool)),
 			DBClusterIdentifier:  aws.String(identifier),

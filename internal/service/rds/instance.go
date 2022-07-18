@@ -717,7 +717,6 @@ func resourceInstanceCreate(d *schema.ResourceData, meta interface{}) error {
 		}
 
 		if _, ok := d.GetOk("allocated_storage"); !ok {
-
 			return fmt.Errorf(`provider.aws: aws_db_instance: %s: "allocated_storage": required field is not set`, dbName)
 		}
 		if _, ok := d.GetOk("engine"); !ok {
@@ -1234,7 +1233,6 @@ func resourceInstanceCreate(d *schema.ResourceData, meta interface{}) error {
 
 		if attr, ok := d.GetOk("multi_az"); ok {
 			opts.MultiAZ = aws.Bool(attr.(bool))
-
 		}
 
 		if attr, ok := d.GetOk("character_set_name"); ok {
@@ -1875,7 +1873,6 @@ func resourceInstanceUpdate(d *schema.ResourceData, meta interface{}) error {
 		if err := UpdateTags(conn, d.Get("arn").(string), o, n); err != nil {
 			return fmt.Errorf("error updating RDS DB Instance (%s) tags: %w", d.Get("arn").(string), err)
 		}
-
 	}
 
 	return resourceInstanceRead(d, meta)

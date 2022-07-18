@@ -3732,7 +3732,6 @@ func testAccCheckInstanceSnapshot(s *terraform.State) error {
 				continue
 			}
 			return err
-
 		}
 
 		if len(resp.DBInstances) != 0 && aws.StringValue(resp.DBInstances[0].DBInstanceIdentifier) == rs.Primary.ID {

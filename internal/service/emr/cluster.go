@@ -1033,7 +1033,6 @@ func resourceClusterRead(d *schema.ResourceData, meta interface{}) error {
 	instanceGroups, err := fetchAllInstanceGroups(conn, d.Id())
 
 	if err == nil { // find instance group
-
 		coreGroup := coreInstanceGroup(instanceGroups)
 		masterGroup := findMasterGroup(instanceGroups)
 
@@ -1055,7 +1054,6 @@ func resourceClusterRead(d *schema.ResourceData, meta interface{}) error {
 	instanceFleets, err := FetchAllInstanceFleets(conn, d.Id())
 
 	if err == nil { // find instance fleets
-
 		coreFleet := findInstanceFleet(instanceFleets, emr.InstanceFleetTypeCore)
 		masterFleet := findInstanceFleet(instanceFleets, emr.InstanceFleetTypeMaster)
 
@@ -1377,7 +1375,6 @@ func resourceClusterUpdate(d *schema.ResourceData, meta interface{}) error {
 					break
 				}
 			}
-
 		}
 	}
 
@@ -1966,7 +1963,6 @@ func fetchAllInstanceGroups(conn *emr.EMR, clusterID string) ([]*emr.InstanceGro
 }
 
 func readInstanceFleetConfig(data map[string]interface{}, InstanceFleetType string) *emr.InstanceFleetConfig {
-
 	config := &emr.InstanceFleetConfig{
 		InstanceFleetType:      &InstanceFleetType,
 		Name:                   aws.String(data["name"].(string)),
@@ -2183,7 +2179,6 @@ func expandLaunchSpecification(launchSpecification map[string]interface{}) *emr.
 			spotProvisioning.BlockDurationMinutes = aws.Int64(int64(v.(int)))
 		}
 		if v, ok := configAttributes["allocation_strategy"]; ok {
-
 			spotProvisioning.AllocationStrategy = aws.String(v.(string))
 		}
 

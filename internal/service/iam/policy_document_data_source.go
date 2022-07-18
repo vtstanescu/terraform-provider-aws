@@ -153,7 +153,6 @@ func dataSourcePolicyDocumentRead(d *schema.ResourceData, meta interface{}) erro
 
 			mergedDoc.Merge(sourceDoc)
 		}
-
 	}
 
 	// process the current document
@@ -240,7 +239,6 @@ func dataSourcePolicyDocumentRead(d *schema.ResourceData, meta interface{}) erro
 		}
 
 		doc.Statements = stmts
-
 	}
 
 	// merge our current document into mergedDoc
@@ -256,7 +254,6 @@ func dataSourcePolicyDocumentRead(d *schema.ResourceData, meta interface{}) erro
 
 			mergedDoc.Merge(overrideDoc)
 		}
-
 	}
 
 	// merge in override_json

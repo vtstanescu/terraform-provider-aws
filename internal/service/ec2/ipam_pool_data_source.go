@@ -101,7 +101,6 @@ func dataSourceIPAMPoolRead(d *schema.ResourceData, meta interface{}) error {
 
 	if v, ok := d.GetOk("ipam_pool_id"); ok {
 		input.IpamPoolIds = aws.StringSlice([]string{v.(string)})
-
 	}
 
 	filters, filtersOk := d.GetOk("filter")

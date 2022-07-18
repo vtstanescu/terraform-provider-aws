@@ -143,7 +143,6 @@ func TestAccVPCDefaultSecurityGroup_Classic_basic(t *testing.T) {
 }
 
 func TestAccVPCDefaultSecurityGroup_Classic_empty(t *testing.T) {
-
 	acctest.Skip(t, "This resource does not currently clear tags when adopting the resource")
 	// Additional references:
 	//  * https://github.com/hashicorp/terraform-provider-aws/issues/14631

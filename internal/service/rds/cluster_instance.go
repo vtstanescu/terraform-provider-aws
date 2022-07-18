@@ -622,7 +622,6 @@ func resourceClusterInstanceUpdate(d *schema.ResourceData, meta interface{}) err
 		if err != nil {
 			return err
 		}
-
 	}
 
 	if d.HasChange("tags_all") {

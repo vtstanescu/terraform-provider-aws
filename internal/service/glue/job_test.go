@@ -762,7 +762,6 @@ func testAccCheckJobDestroy(s *terraform.State) error {
 			if tfawserr.ErrCodeEquals(err, glue.ErrCodeEntityNotFoundException) {
 				return nil
 			}
-
 		}
 
 		job := output.Job

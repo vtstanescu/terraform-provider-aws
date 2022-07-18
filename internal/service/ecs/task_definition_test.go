@@ -1005,7 +1005,6 @@ func TestAccECSTaskDefinition_inferenceAccelerator(t *testing.T) {
 func testAccTaskDefinitionConfig_proxyConfiguration(rName string, containerName string, proxyType string,
 	ignoredUid string, ignoredGid string, appPorts string, proxyIngressPort string, proxyEgressPort string,
 	egressIgnoredPorts string, egressIgnoredIPs string) string {
-
 	return fmt.Sprintf(`
 resource "aws_ecs_cluster" "test" {
   name = %[1]q
@@ -1724,7 +1723,6 @@ TASK_DEFINITION
 }
 
 func testAccTaskDefinitionConfig_fargateRuntimePlatformMinimal(rName string, architecture bool, osFamily bool) string {
-
 	var arch string
 	if architecture {
 		arch = `cpu_architecture         = "X86_64"`

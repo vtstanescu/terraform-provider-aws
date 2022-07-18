@@ -51,7 +51,6 @@ func TestAccDSSharedDirectoryAccepter_basic(t *testing.T) {
 			},
 		},
 	})
-
 }
 
 func testAccCheckSharedDirectoryAccepterExists(name string) resource.TestCheckFunc {
@@ -92,7 +91,6 @@ func testAccCheckSharedDirectoryAccepterExists(name string) resource.TestCheckFu
 
 		return nil
 	}
-
 }
 
 func testAccCheckSharedDirectoryAccepterDestroy(s *terraform.State) error {

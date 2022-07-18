@@ -753,7 +753,6 @@ func resourceClusterUpdate(d *schema.ResourceData, meta interface{}) error {
 		if err := UpdateTags(conn, d.Get("arn").(string), o, n); err != nil {
 			return fmt.Errorf("error updating DocumentDB Cluster (%s) tags: %s", d.Get("arn").(string), err)
 		}
-
 	}
 
 	return resourceClusterRead(d, meta)
@@ -908,7 +907,6 @@ func waitForClusterUpdate(conn *docdb.DocDB, id string, timeout time.Duration) e
 }
 
 func buildCloudWatchLogsExportConfiguration(d *schema.ResourceData) *docdb.CloudwatchLogsExportConfiguration {
-
 	oraw, nraw := d.GetChange("enabled_cloudwatch_logs_exports")
 	o := oraw.([]interface{})
 	n := nraw.([]interface{})

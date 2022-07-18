@@ -487,7 +487,6 @@ func flattenEndpoints(apiObjects []types.ExperienceEndpoint) []interface{} {
 	}
 
 	return l
-
 }
 
 func flattenUserIdentityConfiguration(apiObject *types.UserIdentityConfiguration) []interface{} {

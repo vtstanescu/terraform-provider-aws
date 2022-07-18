@@ -2222,7 +2222,6 @@ func testAccCheckFunctionDestroy(s *terraform.State) error {
 		if err == nil {
 			return fmt.Errorf("Lambda Function still exists")
 		}
-
 	}
 
 	return nil

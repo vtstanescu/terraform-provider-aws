@@ -231,11 +231,9 @@ func testAccCheckAnomalyMonitorDestroy(s *terraform.State) error {
 		}
 
 		return names.Error(names.CE, names.ErrActionCheckingDestroyed, tfce.ResAnomalyMonitor, rs.Primary.ID, errors.New("still exists"))
-
 	}
 
 	return nil
-
 }
 
 func testAccAnomalyMonitorConfig_basic(rName string) string {
